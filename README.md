@@ -1,6 +1,4 @@
-# mmad
-multimodal anomaly detection
-
+# Multimodal Anomaly Detection (MMAD)
 
 ----
 
