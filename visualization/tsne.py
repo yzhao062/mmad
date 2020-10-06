@@ -5,6 +5,7 @@ from sklearn.manifold import TSNE
 from matplotlib import pyplot as plt 
 from matplotlib import cm
 import matplotlib.patheffects as PathEffects
+import matplotlib.patches as mpatches
 import seaborn as sns
 import pandas as pd
 
@@ -36,6 +37,9 @@ def scatter(x, label):
                     c=palette[label_idx], alpha=0.7)
     plt.xlim(-25, 25)
     plt.ylim(-25, 25)
+    
+    ls = [mpatches.Patch(color=palette[i],label=str(i)) for i in range(8)]
+    ax.legend(handles=ls)
     ax.axis('off')
     ax.axis('tight')
 
