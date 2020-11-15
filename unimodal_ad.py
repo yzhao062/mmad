@@ -103,3 +103,7 @@ for clf in clfs:
     evaluate_print(clf.__class__.__name__, anomaly_label,
                    temp_score_0 + temp_score_1)
         
+#%%
+input_concat = np.concatenate([np.load(os.path.join("unimodality", "image", "train_image_embedding.npy")), 
+               np.load(os.path.join("unimodality", "language", "word2vec.npy"))], axis=1)
+np.save('input_concat.npy', input_concat)
